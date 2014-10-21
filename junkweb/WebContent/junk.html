@@ -1,0 +1,2332 @@
+<html class=" actuate-browser-strict"><head>
+        <title>Actuate&nbsp;Viewer</title>
+        <meta content="text/html; CHARSET=utf-8" http-equiv="Content-Type">
+    
+        <link type="image/x-icon" href="http://127.0.0.1:55032/iportal/iv/images/actuateIcon.ico" rel="shortcut icon"> 
+        <link type="text/css" rel="stylesheet" media="screen" href="iv/styles/default.css">
+        <script src="/iportal/jsapi" language="JavaScript" type="text/javascript"></script>
+        <style>
+            
+
+        </style>                
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/dialog/styles/dialog.css"><link rel="stylesheet" type="text/css" href="http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/dialog/styles/dialog_desktop.css"><link rel="stylesheet" type="text/css" href="http://127.0.0.1:55032/iportal/iv/styles/viewer.css"><link rel="stylesheet" type="text/css" href="http://127.0.0.1:55032/iportal/iv/styles/viewer_desktop.css"><link rel="stylesheet" type="text/css" href="http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/styles/widget.css"><style type="text/css">.actuate-combo-list-hd, .actuate-list-hd {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/panel-title-light-bg.gif);} .actuate-form-check {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/checkbox.gif);} .actuate-form-radio {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/radio.gif);} ul.actuate-tab-strip-top {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/tab-strip-bg.gif);} .actuate-tab-strip-top .actuate-tab-right {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/tabs-sprite.gif);} .actuate-tab-strip-top .actuate-tab-left {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/tabs-sprite.gif);} .actuate-tab-strip-top .actuate-tab-strip-inner {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/tabs-sprite.gif);} .actuate-tab-strip .actuate-tab-strip-closable a.actuate-tab-strip-close {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/tab-close.gif);} .actuate-tab-strip .actuate-tab-strip-closable a.actuate-tab-strip-close:hover {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/tab-close.gif);} .actuate-tab-scroller-left {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/scroll-left.gif);} .actuate-tab-scroller-right {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tabs/scroll-right.gif);} .actuate-tree-node-expanded .actuate-tree-node-icon {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/folder-open.gif);} .actuate-tree-node-collapsed .actuate-tree-node-icon {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/folder.gif);} .actuate-tree-lines .actuate-tree-elbow {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow.gif);} .actuate-tree-lines .actuate-tree-elbow-plus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-plus.gif);} .actuate-tree-lines .actuate-tree-elbow-minus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-minus.gif);} .actuate-tree-lines .actuate-tree-elbow-end {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-end.gif);} .actuate-tree-lines .actuate-tree-elbow-end-plus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-end-plus.gif);} .actuate-tree-lines .actuate-tree-elbow-end-minus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-end-minus.gif);} .actuate-tree-lines .actuate-tree-elbow-line {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-line.gif);} .actuate-tree-no-lines .actuate-tree-elbow-plus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-plus-nl.gif);} .actuate-tree-no-lines .actuate-tree-elbow-minus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-minus-nl.gif);} .actuate-tree-no-lines .actuate-tree-elbow-end-plus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-end-plus-nl.gif);} .actuate-tree-no-lines .actuate-tree-elbow-end-minus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/elbow-end-minus-nl.gif);} .actuate-tree-drop-ok-append .actuate-dd-drop-icon {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/drop-add.gif);} .actuate-tree-drop-ok-above .actuate-dd-drop-icon {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/drop-over.gif);} .actuate-tree-drop-ok-below .actuate-dd-drop-icon {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/drop-under.gif);} .actuate-tree-drop-ok-between .actuate-dd-drop-icon {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/drop-between.gif);} .actuate-tree-arrows .actuate-tree-elbow-plus, .actuate-tree-arrows .actuate-tree-elbow-minus, .actuate-tree-arrows .actuate-tree-elbow-end-plus, .actuate-tree-arrows .actuate-tree-elbow-end-minus {background-image: url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/tree/arrows.gif);} .actuate-dd-drop-nodrop .actuate-dd-drop-icon {background:-image url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/dd/drop-no.gif)} .actuate-dd-drop-ok .actuate-dd-drop-icon {background:-image url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/dd/drop-yes.gif)} .actuate-dd-drop-ok-add .actuate-dd-drop-icon {background:-image url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/dd/drop-add.gif)} .actuate-widget-html-editor-tb .actuate-widget-btn-text {background:transparent url(http://127.0.0.1:55032/iportal/iportal/jsapi/actuate/widget/images/editor/tb-sprite.gif) no-repeat;}</style></head>
+    
+    
+    <body onload="javascript:init( );" style="margin: 0px; padding: 0px;" class="viewerBody  actuate-browser-gecko actuate-browser-gecko3" id="actuate-gen8">
+
+        <script type="text/javascript">
+        
+        // &lt;![CDATA[
+            var hasSVGSupport = false;
+            var useVBMethod = false;
+            if ( navigator.mimeTypes != null &amp;&amp; navigator.mimeTypes.length &gt; 0 )
+            {
+                if ( navigator.mimeTypes["image/svg+xml"] != null )
+                {
+                    hasSVGSupport = true;
+                }
+            }
+            if ( !hasSVGSupport )
+            {
+                var ua = navigator.userAgent;
+                if ( ua != null &amp;&amp; ua.toLowerCase().indexOf("msie 9") &gt;= 0 )
+                {
+                    hasSVGSupport = true;
+                }
+                else
+                {
+                    useVBMethod = true;
+                }
+            }
+        // ]]&gt;
+        </script>
+        
+        <script type="text/vbscript">
+            On Error Resume Next
+            If useVBMethod = true Then
+                hasSVGSupport = IsObject(CreateObject("Adobe.SVGCtl"))
+            End If
+        </script>
+    
+        <script type="text/javascript">
+
+            function init( )
+            {   
+                var reqOps = new actuate.RequestOptions( );
+                
+                    reqOps.setVolumeProfile( "workgroup" );
+                
+            
+                var urlParameters = {};
+                urlParameters["__locale"] = "en_US";
+                
+                        urlParameters["connectionHandle"] = "31";
+                
+                        urlParameters["__svg"] = "false";
+                
+                        urlParameters["__timezone"] = "US/Michigan";
+                
+                        urlParameters["__masterpage"] = "true";
+                
+                        urlParameters["__locale"] = "en_US";
+                
+                        urlParameters["__design"] = "C:/Users/david.rutherford/birt-pro-workspace/Chart Interactivity/wfd_1233601714498744b2e7dab--chart-table_interactivity.rptdesign";
+                
+
+                reqOps.setCustomParameters( urlParameters );
+                
+                        
+                var baseURL = location.href.replace( /(\/iv.*)/, "/" );
+                    
+                actuate.load("viewer");
+                actuate.load("dialog");
+                actuate.initialize(
+                        baseURL,
+                        reqOps,
+                        "anonymous",
+                        null,
+                        function()
+                        {
+                                
+                                initViewer();
+                            
+                        }
+                        
+                        );
+            }
+    
+            function initViewer( )
+            {   
+                try
+                {
+                    // ted 21336
+                    // get UUID for viewr
+                    var viewerUUID = 1431696108;
+                    // pass UUID to viewer
+                    var viewer = new actuate.Viewer( "container", null, viewerUUID );
+                            
+                            viewer.setHelpBase( "http://www.actuate.com/documentation/R11SP4/ajc/help/en_us" );
+                        
+                            
+                            viewer.setReportDesign( "C:/Users/david.rutherford/birt-pro-workspace/Chart Interactivity/wfd_1233601714498744b2e7dab--chart-table_interactivity.rptdesign" );
+                        
+                            
+                            viewer.setReportDocument( "/$$$Transient/acfile39.rptdocument", "31" );
+                                    
+                    viewer.setSupportSVG( hasSVGSupport );
+                    
+                    var options = new actuate.viewer.UIOptions( );
+                    viewer.setUIOptions( options );
+                    viewer.submit( );
+                }
+                catch( e )
+                {
+                    alert( e.getErrorMessage( ) );
+                }
+            }
+            
+        </script>
+
+        <!-- Header section -->
+        <div class="standaloneViewer">
+            <!-- ted 27913 remove logo from iv -->
+            <!--< DIV CLASS="viewerCaption">
+                 <IMG BORDER="0" style="padding-bottom:1px" SRC="/iportal/iportal/activePortal/private/skins/treeview/images/logo.png" ALIGN="middle"> 
+            </DIV> -->
+            
+                <div class="viewerContainer" id="container" style="width: 1920px; height: 927px; overflow: hidden;"><div id="actuateViewerContainerjs3" style="margin: 0px; padding: 0px; text-indent: 0px; position: relative;" class="actuateViewerContainer">
+
+<!--  Copyright 1994-2005, Actuate Software Corp., All rights reserved.--> 
+
+
+
+
+
+
+
+
+
+<div class="contextMenu" id="actuate_iv_ui_app_contextmenu_ivContextMenu">
+
+    <!-- Main menu -->
+    <div style="display:none;position:absolute;z-index:310" root="true" id="contextMenuId_subMenu_Main_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div submenuid="contextMenu_subMenu_Header_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Header</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Group_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Group</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Column_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Column</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div class="ContextMenuHorizontalRule"></div>
+                    <div eventparam="10" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories10" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="9" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories9" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="8" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories8" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="7" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories7" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="6" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories6" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="5" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories5" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="4" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories4" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="3" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories3" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="2" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories2" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="1" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="1" eventname="CHART_CATEGORIES" opt="DrillDownFromCategories" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_drill_down_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill into Categories</label>
+                    </div>
+
+                    <div class="ContextMenuHorizontalRule"></div>
+                        
+                    <div eventparam="10" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries10" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="9" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries9" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="8" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries8" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="7" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries7" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="6" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries6" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="5" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries5" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="4" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries4" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="3" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries3" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="2" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries2" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="1" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="1" eventname="CHART_SERIES" opt="DrillDownFromSeries" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_drill_down_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill into Series</label>
+                    </div>
+                    
+                    <div class="ContextMenuHorizontalRule"></div>
+                        
+                    <div eventname="AGGREGATION" opt="Aggregation" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Aggregate">
+                        <label class="ContextMenuLeafLabel">Aggregation</label>
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Filter_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Filter</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>  
+
+                    <div class="ContextMenuHorizontalRule"></div>
+
+                    <div eventname="QUERYTYPE" opt="ChartSubType" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarchart">
+                        <label class="ContextMenuLeafLabel">Change Subtype</label>
+                    </div>  
+                    <div eventname="QUERYTYPE" opt="FlashGadgetType" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarchart">
+                        <label class="ContextMenuLeafLabel">Change Type</label>
+                    </div>  
+                    <div eventname="FLASHGADGET_FORMAT" opt="FlashGadgetFormat" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarchart">
+                        <label class="ContextMenuLeafLabel">Format Flash Gadget</label>
+                    </div>  
+                    <div eventname="CHART_FORMAT" opt="ChartProperty" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_chart_format">
+                        <label class="ContextMenuLeafLabel">Format Chart</label>
+                    </div>  
+                    
+                    <div eventname="QUERY_TEXT" opt="Text" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlayedit">
+                        <label class="ContextMenuLeafLabel">Change Text</label>
+                    </div>
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    <div eventname="SHOW_TOOLTIP" opt="ShowTooltip" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_show_tooltip">
+                        <label class="ContextMenuLeafLabel">Show Detail Tooltip</label>
+                    </div>
+                        
+                    <div class="ContextMenuHorizontalRule"></div>
+                    <div submenuid="contextMenu_subMenu_Grandtotal_Id" opt="GrandTotal" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Grand Totals</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="contextMenu_subMenu_Subtotal_Id" opt="SubTotal" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Subtotals</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                     
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    <div submenuid="contextMenu_subMenu_Sort_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Sort</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Style_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Format</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div class="ContextMenuHorizontalRule"></div>
+                    <div eventname="DATA_ANALYZER" opt="DataAnalyzer" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_DataAnalyzer">
+                        <label class="ContextMenuLeafLabel">Analyze</label>
+                    </div>
+                    <div eventname="SWITCH_VIEW" opt="SwitchView" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Switch_view">
+                        <label class="ContextMenuLeafLabel">Switch View</label>
+                    </div>
+
+                    <div class="ContextMenuHorizontalRule"></div>
+
+                    <div eventname="QUERY_EXPORT" opt="ExportElementData" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_firstload actuateIV_Export">
+                        <label class="ContextMenuLeafLabel">Export Data</label>
+                    </div>
+                    <div eventname="EXPORTREPORT" opt="ExportElement" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_firstload actuateIV_ExportReport">
+                        <label class="ContextMenuLeafLabel">Export Content</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    
+    <!-- Style sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Style_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                    
+                    <div eventname="SHARE_STYLE" opt="ShareStyle" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Copy_style">
+                        <label class="ContextMenuLeafLabel">Copy Style</label>
+                    </div>
+                    
+                    <div eventname="CONDITIONALFORMATTING" opt="ConditionalFormat" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_conditional_format">
+                        <label class="ContextMenuLeafLabel">Conditional Formatting</label>
+                    </div>
+                    
+                    <div eventname="QUERY_FORMAT" opt="Format" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_data">
+                        <label class="ContextMenuLeafLabel">Format Data</label>
+                    </div>
+                        <div eventname="SHARE_FORMAT" opt="ShareFormat" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Copy_format">
+                        <label class="ContextMenuLeafLabel">Copy Format</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Grandtotal_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Grandtotal_label_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Label</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="contextMenu_subMenu_Grandtotal_data_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Data</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total Label sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_Id" id="contextMenu_subMenu_Grandtotal_label_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Grandtotal_label_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="???contextmenu.submenu.grandTotal.label.format.htmlId???" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Format</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+        <!-- Grand Total data sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_Id" id="contextMenu_subMenu_Grandtotal_data_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Grandtotal_data_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total Label alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_label_Id" id="contextMenu_subMenu_Grandtotal_label_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="GRANDTOTAL_LABEL_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="GRANDTOTAL_LABEL_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="GRANDTOTAL_LABEL_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Grand Total Label format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_label_Id" id="???contextmenu.submenu.grandTotal.label.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_GRANDTOTAL_LABEL_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total data alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_data_Id" id="contextMenu_subMenu_Grandtotal_data_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="GRANDTOTAL_DATA_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="GRANDTOTAL_DATA_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                    </div>
+                    
+                    <div eventname="GRANDTOTAL_DATA_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Grand Total data format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_data_Id" id="???contextmenu.submenu.grandTotal.data.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_GRANDTOTAL_DATA_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                        
+                    </div>                  
+                    
+                    <div eventname="QUERY_GRANDTOTAL_DATA_FORMAT" opt="Format" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_data">
+                        <label class="ContextMenuLeafLabel">Format Data</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+
+    <!-- Sub Total sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Subtotal_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Subtotal_label_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Label</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="contextMenu_subMenu_Subtotal_data_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Data</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- sub Total Label sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_Id" id="contextMenu_subMenu_Subtotal_label_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Subtotal_label_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="???contextmenu.submenu.subTotal.label.format.htmlId???" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Format</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+        <!-- Sub Total data sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_Id" id="contextMenu_subMenu_Subtotal_data_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Subtotal_data_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Sub Total Label alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_label_Id" id="contextMenu_subMenu_Subtotal_label_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="SUBTOTAL_LABEL_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_LABEL_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_LABEL_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Sub Total Label format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_label_Id" id="???contextmenu.submenu.subTotal.label.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_SUBTOTAL_LABEL_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Sub Total data alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_data_Id" id="contextMenu_subMenu_Subtotal_data_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="SUBTOTAL_DATA_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_DATA_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_DATA_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Sub Total data format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_data_Id" id="???contextmenu.submenu.subTotal.data.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_SUBTOTAL_DATA_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                    
+                    <div eventname="QUERY_SUBTOTAL_DATA_FORMAT" opt="Format" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_data">
+                        <label class="ContextMenuLeafLabel">Format Data</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>                
+    </div>  
+    
+    <!-- Alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- LabelMenu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Header_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_TEXT" opt="HeaderText" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlayedit">
+                        <label class="ContextMenuLeafLabel">Change Text</label>
+                    </div>
+                    <div submenuid="contextMenu_subMenu_HeaderAlign_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div eventname="QUERY_HEADER_FONT" opt="ChangeHeaderFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Label Alignment Menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Header_Id" id="contextMenu_subMenu_HeaderAlign_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="HEADER_ALIGN_LEFT" opt="HeaderAlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="HEADER_ALIGN_CENTER" opt="HeaderAlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="HEADER_ALIGN_RIGHT" opt="HeaderAlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+
+
+    <!-- Filter sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Filter_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="Filter" opt="Filter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarfilter">
+                        <label class="ContextMenuLeafLabel">Filter</label>
+                        
+                    </div>
+
+                    <div eventname="TOPBOTTOMN" opt="TopBottomN" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_top_bottom_N">
+                        <label class="ContextMenuLeafLabel">Top/Bottom N</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+    
+    <!-- Group sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Group_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_GROUP_DETAIL" opt="AddGroup" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Add_group">
+                        <label class="ContextMenuLeafLabel">Add Group</label>
+                        
+                    </div>
+                    <div eventname="DELETE_GROUP" opt="DeleteGroup" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Delete_group">
+                        <label class="ContextMenuLeafLabel">Delete Inner Group</label>
+                        
+                    </div>
+                    <div eventname="QUERY_PAGE_BREAK" opt="PageBreak" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Page_break">
+                        <label class="ContextMenuLeafLabel">Page Break</label>
+                        
+                    </div>
+                    <div eventname="HIDEDETAIL" opt="HideDetail" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_hide_detail">
+                        <label class="ContextMenuLeafLabel">Hide Detail</label>
+                        
+                    </div>
+                    <div eventname="SHOWDETAIL" opt="ShowDetail" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_show_detail">
+                        <label class="ContextMenuLeafLabel">Show Detail</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+    
+    <!-- Sort sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Sort_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="SORTASC" opt="SortAsc" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Sort_ascending">
+                        <label class="ContextMenuLeafLabel">Sort Ascending</label>
+                        
+                    </div>
+                    <div eventname="SORTDESC" opt="SortDsc" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Sort_descending">
+                        <label class="ContextMenuLeafLabel">Sort Descending</label>
+                        
+                    </div>
+                                        
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    <div eventname="SORTADVANCED" opt="AdvancedSort" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Advance_sort">
+                        <label class="ContextMenuLeafLabel">Advanced Sort</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+    
+    <!-- Column sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Column_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="HIDE_COLUMN" opt="HideColumn" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Hide_column">
+                        <label class="ContextMenuLeafLabel">Hide Column</label>
+                        
+                    </div>
+                    <div eventname="QUERY_HIDDEN_COLUMN" opt="ShowColumns" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Show_all_columns">
+                        <label class="ContextMenuLeafLabel">Show Column</label>
+                        
+                    </div>
+                    <div eventname="DELETE_COLUMN" opt="DeleteColumn" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Delete">
+                        <label class="ContextMenuLeafLabel">Delete Column</label>
+                        
+                    </div>
+                    <div eventname="CALCULATION" opt="Calculation" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Calculation">
+                        <label class="ContextMenuLeafLabel">New Computed Column</label>
+                        
+                    </div>
+                    <div eventname="EDIT_CALCULATION" opt="EditCalculation" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_EditCalculation">
+                        <label class="ContextMenuLeafLabel">Edit Computed Column</label>
+                        
+                    </div>
+                    
+                    
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    
+                    <div eventname="MOVE_TO_LEFT" opt="MoveToLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Move_to_left">
+                        <label class="ContextMenuLeafLabel">Move To Left</label>
+                        
+                    </div>
+                    <div eventname="MOVE_TO_RIGHT" opt="MoveToRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Move_to_right">
+                        <label class="ContextMenuLeafLabel">Move To Right</label>
+                        
+                    </div>
+                    <div eventname="QUERY_MANAGETABLECOLUMN" opt="ReorderColumns" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Reorder_columns">
+                        <label class="ContextMenuLeafLabel">Reorder Columns</label>
+                        
+                    </div>
+                    
+                    
+                    <div class="ContextMenuHorizontalRule"></div>                       
+                    
+                    
+                    <div eventname="REPEAT_VALUE" opt="SuppressDuplicateValues" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_repeat">
+                        <label class="ContextMenuLeafLabel">Repeat Values</label>
+                        
+                    </div>
+                    <div eventname="NO_REPEAT_VALUE" opt="NotSuppressDuplicateValues" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_do_not_repeat">
+                        <label class="ContextMenuLeafLabel">Do Not Repeat Values</label>
+                        
+                    </div>
+                    <div eventname="QUERY_GROUP" opt="MoveToGroup" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Move_column">
+                        <label class="ContextMenuLeafLabel">Move to Group Header</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+        <div configenabled="YES" opt="Toolbar" class="navbar" id="NavigationBar" style="width: 1920px; display: block;">
+            <table cellspacing="0" cellpadding="0" class="navbar_layout">
+                <tbody><tr nowrap="">
+                    <td width="16px">
+                    
+                    </td><td width="25px">  
+                        <input type="button" configenabled="YES" opt="MainMenu" title="Click to view Main Menu " class="navbar_start_img actuateCSSSprite_firstload actuateIV_start" name="ToolbarBtn" style="visibility: visible;">
+                    </td>
+                    
+                    <td width="11px">
+                    </td><td width="2px">
+                        <input type="button" tabindex="-1" class="navbar_seperator_img actuateCSSSprite_firstload actuateIV_divider" name="parameterimg">
+                    </td>
+                    <td width="11px">
+
+                    </td><td width="211px">
+                        <div configenabled="YES" id="actuate_iv_ui_app_ivNavigationBar_pagenavigation" style="display: block;">
+                            <table cellspacing="0" cellpadding="0" class="navbar_layout">
+                                <tbody><tr>
+                                    <td width="40px" nowrap="" height="27px">
+                                        <span class="navbar_input_goto" value="
+                                                0
+                                        " id="actuate_iv_ui_app_ivNavigationBar_gotoPage" style="visibility: visible;"><input type="text" name="actu-widget-1060" autocomplete="off" size="20" id="actuate-gen18" class=" actuate-form-text actuate-form-field navbar_input_goto" style="visibility: visible;"></span><span style="padding-left: 2px">/</span>
+                                    </td>
+                                    <td nowrap="">
+                                        <div id="actuate_iv_ui_app_ivNavigationBar_totalPage"><label id="actu-widget-1061" class=" navbar_totalPage" style="color: black;">1&nbsp;</label></div>
+                                    </td>
+                                                                        
+                                    <td width="11px">
+                                    </td><td width="2px">
+                                        <input type="button" tabindex="-1" class="navbar_seperator_img actuateCSSSprite_firstload actuateIV_divider" name="parameterimg">
+                                    </td>
+                                    <td width="11px">
+                                    </td><td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_first_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_first" class="navbar_img actuateCSSSprite_firstload actuateIV_first_disabled" title="First Page" name="First">
+                                    </td>
+                                    <td width="8px" height="27px" align="center">&nbsp;&nbsp;</td>
+                                    <td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_prev_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_prev" class="navbar_img actuateCSSSprite_firstload actuateIV_prev_disabled" title="Previous Page" name="Previous">
+                                    </td>
+                                    <td width="24px" height="27px" align="center">&nbsp;&nbsp;</td>
+                                    <td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_next_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_next" class="navbar_img actuateCSSSprite_firstload actuateIV_next_disabled" title="Next Page" name="Next">
+                                    </td>
+                                    <td width="8px" height="27px" align="center">&nbsp;&nbsp;</td>
+                                    <td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_last_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_last" class="navbar_img actuateCSSSprite_firstload actuateIV_last_disabled" title="Last Page" name="Last">
+                                    </td>                   
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </td>
+        
+                    <td width="11px">
+                    </td><td width="2px">
+                        <input type="button" tabindex="-1" class="navbar_seperator_img actuateCSSSprite_firstload actuateIV_divider" name="parameterimg">
+                    </td>
+                    <td width="10px">
+                    </td><td width="15px" height="27px" class="navbar_cell_right">
+                        <input type="button" title="Undo" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_undo_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_undo" class="navbar_img actuateCSSSprite_firstload actuateIV_undo_disabled" name="undoimg" style="display: none; visibility: visible;">
+                    </td>
+                    <td width="12px" height="27px" align="center"></td>
+                    <td width="15px" height="27px" class="navbar_cell_right">                                                                   
+                        <input type="button" title="Redo" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_redo_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_redo" class="navbar_img actuateCSSSprite_firstload actuateIV_redo_disabled" name="redoimg" style="display: none; visibility: visible;">
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+
+                 
+
+
+
+
+
+
+
+
+<div class="toolbar_outermostDiv" style="display: none; z-index: 700;">
+    <div class="toolbar_menuDiv">
+        
+                <div configenabled="YES" opt="EditReport" class="toolbar_buttonStyle" name="ENABLE_IV">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer" style="visibility: visible;">    
+                    &nbsp;Enable Interactivity
+                </div>
+                <div configenabled="YES" opt="EditReport" class="toolbar_buttonStyle" name="DISABLE_IV">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer_disabled" style="visibility: visible;">   
+                       &nbsp;Disable Interactivity
+                </div>
+                <div class="toolbar_buttonStyle" name="LAUNCH_VIEWER">
+                    &nbsp;&nbsp;
+                    <input type="button" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Launch_viewer">    
+                       &nbsp;Launch Viewer
+                </div>
+                <hr width="140px" style="display: block;">
+                <div configenabled="NO" opt="SaveDesign" class="toolbar_buttonStyle" name="QUERY_SAVE_FILE" style="display: none;">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDesign_disable" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDesign" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDesign" style="display: none; visibility: hidden;">  
+                        &nbsp;Save Design
+                </div>
+                <div configenabled="NO" opt="SaveDocument" class="toolbar_buttonStyle" name="QUERY_SAVE_DOCUMENT" style="display: none;">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDocument_disable" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDocument" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDocument" style="display: none; visibility: hidden;">     
+                        &nbsp;Save Document
+                </div>
+            
+        <div configenabled="YES" opt="Print" class="toolbar_buttonStyle" name="PRINT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Print_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Print" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Print" style="visibility: visible;">   
+                   &nbsp;Print
+        </div>
+        <div configenabled="YES" opt="ExportReport" class="toolbar_buttonStyle" name="DOCUMENT_EXPORTREPORT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_ExportReport_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_ExportReport" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_ExportReport" style="visibility: visible;">      
+                   &nbsp;Export Content
+        </div>
+        <div configenabled="YES" opt="ExportData" class="toolbar_buttonStyle" name="QUERY_DOCUMENT_EXPORT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Export_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Export" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Export" style="visibility: visible;">    
+                   &nbsp;Export Data
+        </div>
+        <hr width="140px" style="display: block;">
+        <div class="toolbar_buttonStyle" name="FIRST">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_first_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_first" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_first">    
+                   &nbsp;First Page
+        </div>
+        <div class="toolbar_buttonStyle" name="PREVIOUS">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_prev_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_prev" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_prev">   
+                   &nbsp;Previous Page
+        </div>
+        <div class="toolbar_buttonStyle" name="NEXT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_next_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_next" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_next">   
+                   &nbsp;Next Page
+        </div>
+        <div class="toolbar_buttonStyle" name="LAST">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_last_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_last" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_last">   
+                   &nbsp;Last Page
+        </div>
+        <div configenabled="YES" opt="Parameter" class="toolbar_buttonStyle" name="QUERY_PARAMETER">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Parameter_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Parameter" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Parameter" style="visibility: visible;">   
+                   &nbsp;Parameters
+        </div>
+        
+        <div configenabled="YES" opt="Toc" class="toolbar_buttonStyle" name="TOC">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Toc_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Toc" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Toc" style="visibility: visible;">    
+                   &nbsp;TOC
+        </div>
+        
+            <div configenabled="YES" opt="HideShowItems" class="toolbar_buttonStyle" name="HIDESHOW_ITEM">
+                &nbsp;&nbsp;
+                <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Hide_show_item_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Hide_show_item" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Hide_show_item" style="visibility: visible;">    
+                       &nbsp;Hide/Show Item
+            </div>
+            
+        <hr width="140px" style="display: block;">
+        
+        <div configenabled="YES" opt="ShowMargin" class="toolbar_buttonStyle" name="SHOW_MARGIN">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Show_margin" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Show_margin" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Show_margin" style="visibility: visible;">      
+                   &nbsp;<label>Show Margin</label>
+        </div>
+        <hr width="140px" style="display: block;">  
+            
+        <div configenabled="YES" opt="LinkToThisPage" class="toolbar_buttonStyle" name="LINKTOTHISPAGE">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Link_to_pg" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Link_to_pg" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Link_to_pg" style="visibility: visible;">     
+                   &nbsp;Link to this page
+        </div>
+        <div configenabled="YES" opt="ToolbarHelp" class="toolbar_buttonStyle" name="HELP">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_toolbarHelp" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_toolbarHelp" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_toolbarHelp" style="visibility: visible;">      
+                   &nbsp;Help
+        </div>
+    </div>
+</div>
+
+        
+
+
+
+
+
+
+ 
+
+<div class="content" style="top: 30px;">
+
+
+
+
+
+
+
+
+
+ 
+
+
+<div ivhighlight="true" ivhoverhighlight="false" mousescrolling="" paninout="" scrollcontrol="" scrollpanel="" class="contentPanel" style="overflow: auto; position: absolute; width: 1920px; height: 897px; margin: 0px; padding: 0px; background-color: white; left: 0px; z-index: 200;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="mapControl" id="MapControl">
+            <div style="top:0px;left:25px;position:absolute;" height="9px" width="9pz">
+                <input type="button" title="Up" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_up" name="mapupimg">
+            </div>
+            <div style="top:0px;left:54px;position:absolute;" height="6px" width="6px">
+                <input type="button" title="Top" style="display:none;" class="mapcontrol_corner actuateCSSSprite_firstload actuateIV_top" name="maptopimg">
+            </div>
+            <div style="top:25px;left:0px;position:absolute;" height="9px" width="9px">
+                <input type="button" title="Left" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_left" name="mapleftimg">
+            </div>
+            <div style="top:22px;left:22px;position:absolute;" height="16px" width="16px">
+                <input type="button" title="Return" class="mapcontrol_center actuateCSSSprite_firstload actuateIV_home" name="mapbackimg">
+            </div>
+            <div style="top:25px;left:51px;position:absolute;" height="9px" width="9px">
+                <input type="button" title="Right" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_right" name="maprightimg">
+            </div>
+            <div style="top:51px;left:25px;position:absolute;" height="9px" width="9px">
+                <input type="button" title="Down" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_down" name="mapdownimg">
+            </div>
+            <div style="top:54px;left:54px;position:absolute;" height="6px" width="6px">
+                <input type="button" title="Bottom" class="mapcontrol_corner actuateCSSSprite_firstload actuateIV_bottom" name="mapbottomimg">
+            </div>
+        </div>
+    <div class="floatPanel" style="position: absolute; width: 1902px; margin: 0px; padding: 0px; z-index: 300; height: 897px; top: 0px; left: 0px;"><div style="margin: 25px 0px 0px;"><style type="text/css">.js3_style_0 { font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10pt; color: black; text-indent: 0em; letter-spacing: normal; word-spacing: normal; text-transform: none; white-space: normal; line-height: normal;}</style><script type="text/javascript"> //&lt;![CDATA[   function js3_redirect(target, url){       if (target =='_blank'){           open(url);       }       else if (target == '_top'){           window.top.location.href=url;       }       else if (target == '_parent'){           location.href=url;       }       else if (target == '_self'){           location.href =url;       }       else{           open(url);       }      } //]]&gt;</script><div class="js3_style_0" id="js3___BIRT_ROOT"><table cellpadding="0" style="empty-cells: show; border-collapse:collapse; width:100%; height:10.5in;" rules="none"><colgroup><col></colgroup><tbody><tr><td></td></tr><tr style="height:100%;"><td valign="top"><div><map style="display:none" name="js3_AUTOGENBOOKMARK_1_508fd702-d60a-42da-8688-37094201bd90" id="js3_AUTOGENBOOKMARK_1_508fd702-d60a-42da-8688-37094201bd90"><area seriesvalues="Series+1" categoryvalues="Australia,Austria,Belgium,Canada,Denmark,Finland,France,Germany,Hong+Kong,Ireland,Italy,Japan,New+Zealand,Norway,Philippines,Singapore,Spain,Sweden,Switzerland,UK,USA" id="birt_chart"><script>function userCallBack501968073(evt,categoryData, valueData, valueSeriesName, legendItemData, legendItemText, legendItemValue, axisLabel){// "Invoke Script" of a BIRT chart contains the following variables:
+// evt - browser event object
+// categoryData - value of the Category that was clicked
+// valueData - numeric value of the item clicked in the chart
+// valueSeriesName - name of the series that was clicked
+ 
+// Get a handle on the Actuate JSAPI Viewer for this chart
+// browsers implement the event object differently
+// evt.srcElement is for IE, evt.target is for Firefox
+// getTableBookmark() can optionally take the name of a BIRT bookmark
+ 
+var table = actuate.getViewer(evt.srcElement || evt.target).getCurrentPageContent().getTableByBookmark();
+ 
+ 
+// create a new Filter object and apply it to the table
+ 
+table.setFilters(new actuate.data.Filter("COUNTRY", "eq", categoryData));
+table.submit();};</script><area onclick="userCallBack501968073(event,'USA',3273280.0499999993,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="736,79,736,273,752,273,752,79" shape="poly"><area onclick="userCallBack501968073(event,'UK',436947.44,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="703,247,703,273,719,273,719,247" shape="poly"><area onclick="userCallBack501968073(event,'Switzerland',108777.92,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="670,263,670,273,687,273,687,263" shape="poly"><area onclick="userCallBack501968073(event,'Sweden',187638.35,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="637,262,637,273,654,273,654,262" shape="poly"><area onclick="userCallBack501968073(event,'Spain',1099389.09,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="605,208,605,273,621,273,621,208" shape="poly"><area onclick="userCallBack501968073(event,'Singapore',263997.7799999999,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="572,257,572,273,588,273,588,257" shape="poly"><area onclick="userCallBack501968073(event,'Philippines',87468.29999999999,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="539,263,539,273,555,273,555,263" shape="poly"><area onclick="userCallBack501968073(event,'Norway',270846.3,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="506,257,506,273,522,273,522,257" shape="poly"><area onclick="userCallBack501968073(event,'New Zealand',476847.01,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="473,245,473,273,490,273,490,245" shape="poly"><area onclick="userCallBack501968073(event,'Japan',167909.95,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="440,263,440,273,457,273,457,263" shape="poly"><area onclick="userCallBack501968073(event,'Italy',360616.81000000006,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="407,252,407,273,424,273,424,252" shape="poly"><area onclick="userCallBack501968073(event,'Ireland',49898.27,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="375,263,375,273,391,273,391,263" shape="poly"><area onclick="userCallBack501968073(event,'Hong Kong',45480.78999999999,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="342,263,342,273,358,273,358,263" shape="poly"><area onclick="userCallBack501968073(event,'Germany',196470.99,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="309,261,309,273,325,273,325,261" shape="poly"><area onclick="userCallBack501968073(event,'France',1007374.02,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="276,213,276,273,293,273,293,213" shape="poly"><area onclick="userCallBack501968073(event,'Finland',295149.35000000003,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="243,255,243,273,260,273,260,255" shape="poly"><area onclick="userCallBack501968073(event,'Denmark',218994.91999999998,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="210,260,210,273,227,273,227,260" shape="poly"><area onclick="userCallBack501968073(event,'Canada',205911.86,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="178,261,178,273,194,273,194,261" shape="poly"><area onclick="userCallBack501968073(event,'Belgium',100068.75999999998,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="145,263,145,273,161,273,161,263" shape="poly"><area onclick="userCallBack501968073(event,'Austria',188540.06,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="112,262,112,273,128,273,128,262" shape="poly"><area onclick="userCallBack501968073(event,'Australia',562582.59,'Series 1',null,null,null,null);" href="javascript:void(0);" alt="" coords="79,240,79,273,95,273,95,240" shape="poly"></map><img style="border-top-style:none;border-bottom-style:none;border-left-style:none;border-right-style:none; width: 576.75pt; height: 277.5pt;display: block;" alt="" usemap="#js3_AUTOGENBOOKMARK_1_508fd702-d60a-42da-8688-37094201bd90" src="http://127.0.0.1:55032/iportal/iv?__ivcmd=getimage&amp;__vp=workgroup&amp;Volume=&amp;__ivSessionId=1359045790180_16e9pwxb0i1bv1ou0ug4qobu6u&amp;__report=%2F%24%24%24Transient%2Facfile39.rptdocument&amp;__imageID=%2F%2F%2F%24%24%24transient%2Facfile39.rptdocument%3B%2F%24%24%24Transient%2Facfile39.rptdocument%2Fen_us%24%24%24%24%2F0.1496PNG%3BGIF%3BJPG%3BSWF%3BBMPen_US&amp;connectionHandle=31&amp;1359045803026&amp;__mimetype=image%2Fpng" class="birt-chart-design" element_type="Chart" iid="/0.14" id="js3___bookmark_1"></div><table element_type="TABLE" iid="/1.15" id="js3___bookmark_2" style="border-collapse: collapse; empty-cells: show; width: 100%;"><colgroup><col iid="/49"><col iid="/50"><col iid="/51"><col iid="/52"><col iid="/53"><col iid="/54"></colgroup><tbody><tr valign="top" align="center" type="wrth" row-type="header"><th align="left"><div class="birt-label-design" element_type="LABEL" iid="/0.18" id="js3_AUTOGENBOOKMARK_2_c84e4e40-734f-4fdc-95b1-4c5150e8ce23">CUSTOMERNUMBER</div></th><th align="left"><div class="birt-label-design" element_type="LABEL" iid="/0.20" id="js3_AUTOGENBOOKMARK_3_43e19e8e-7536-472a-becd-bfe59d15707c">CUSTOMERNAME</div></th><th align="left"><div class="birt-label-design" element_type="LABEL" iid="/0.22" id="js3_AUTOGENBOOKMARK_4_a714e59f-fc5e-4e32-b7b5-50df5f0b9355">COUNTRY</div></th><th align="left"><div class="birt-label-design" element_type="LABEL" iid="/0.24" id="js3_AUTOGENBOOKMARK_5_6fb7ca7b-4d5b-496d-9f0e-dd0092b22724">ORDERNUMBER</div></th><th align="left"><div class="birt-label-design" element_type="LABEL" iid="/0.26" id="js3_AUTOGENBOOKMARK_6_6f85f9d4-30d3-4ef0-bba0-001458e50259">ORDERDATE</div></th><th align="right"><div class="birt-label-design" element_type="LABEL" iid="/0.28" id="js3_AUTOGENBOOKMARK_7_3cfa99ab-c2fe-4441-853e-e2a2bb8cc1e8">ORDERTOTAL</div></th></tr><tr valign="top"><td align="left"><div class="birt-data-design">103</div></td><td align="left"><div class="birt-data-design">Atelier graphique</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10123</div></td><td align="left"><div class="birt-data-design">5/20/03</div></td><td align="right"><div class="birt-data-design">$14,571.44</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">103</div></td><td align="left"><div class="birt-data-design">Atelier graphique</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10298</div></td><td align="left"><div class="birt-data-design">9/27/04</div></td><td align="right"><div class="birt-data-design">$6,066.78</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">103</div></td><td align="left"><div class="birt-data-design">Atelier graphique</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10345</div></td><td align="left"><div class="birt-data-design">11/25/04</div></td><td align="right"><div class="birt-data-design">$1,676.14</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">119</div></td><td align="left"><div class="birt-data-design">La Rochelle Gifts</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10275</div></td><td align="left"><div class="birt-data-design">7/23/04</div></td><td align="right"><div class="birt-data-design">$47,924.19</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">119</div></td><td align="left"><div class="birt-data-design">La Rochelle Gifts</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10315</div></td><td align="left"><div class="birt-data-design">10/29/04</div></td><td align="right"><div class="birt-data-design">$19,501.82</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">119</div></td><td align="left"><div class="birt-data-design">La Rochelle Gifts</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10375</div></td><td align="left"><div class="birt-data-design">2/3/05</div></td><td align="right"><div class="birt-data-design">$49,523.67</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">119</div></td><td align="left"><div class="birt-data-design">La Rochelle Gifts</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10425</div></td><td align="left"><div class="birt-data-design">5/31/05</div></td><td align="right"><div class="birt-data-design">$41,623.44</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">146</div></td><td align="left"><div class="birt-data-design">Saveley &amp; Henriot, Co.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10194</div></td><td align="left"><div class="birt-data-design">11/25/03</div></td><td align="right"><div class="birt-data-design">$39,712.10</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">146</div></td><td align="left"><div class="birt-data-design">Saveley &amp; Henriot, Co.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10208</div></td><td align="left"><div class="birt-data-design">1/2/04</div></td><td align="right"><div class="birt-data-design">$49,614.72</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">146</div></td><td align="left"><div class="birt-data-design">Saveley &amp; Henriot, Co.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10227</div></td><td align="left"><div class="birt-data-design">3/2/04</div></td><td align="right"><div class="birt-data-design">$40,978.53</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">171</div></td><td align="left"><div class="birt-data-design">Daedalus Designs Imports</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10180</div></td><td align="left"><div class="birt-data-design">11/11/03</div></td><td align="right"><div class="birt-data-design">$42,783.81</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">171</div></td><td align="left"><div class="birt-data-design">Daedalus Designs Imports</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10224</div></td><td align="left"><div class="birt-data-design">2/21/04</div></td><td align="right"><div class="birt-data-design">$18,997.89</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">172</div></td><td align="left"><div class="birt-data-design">La Corne D'abondance, Co.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10114</div></td><td align="left"><div class="birt-data-design">4/1/03</div></td><td align="right"><div class="birt-data-design">$33,383.14</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">172</div></td><td align="left"><div class="birt-data-design">La Corne D'abondance, Co.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10286</div></td><td align="left"><div class="birt-data-design">8/28/04</div></td><td align="right"><div class="birt-data-design">$1,960.80</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">172</div></td><td align="left"><div class="birt-data-design">La Corne D'abondance, Co.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10336</div></td><td align="left"><div class="birt-data-design">11/20/04</div></td><td align="right"><div class="birt-data-design">$51,209.58</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">209</div></td><td align="left"><div class="birt-data-design">Mini Caravy</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10241</div></td><td align="left"><div class="birt-data-design">4/13/04</div></td><td align="right"><div class="birt-data-design">$36,069.26</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">209</div></td><td align="left"><div class="birt-data-design">Mini Caravy</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10255</div></td><td align="left"><div class="birt-data-design">6/4/04</div></td><td align="right"><div class="birt-data-design">$4,632.31</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">209</div></td><td align="left"><div class="birt-data-design">Mini Caravy</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10405</div></td><td align="left"><div class="birt-data-design">4/14/05</div></td><td align="right"><div class="birt-data-design">$35,157.75</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">242</div></td><td align="left"><div class="birt-data-design">Alpha Cognac</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10136</div></td><td align="left"><div class="birt-data-design">7/4/03</div></td><td align="right"><div class="birt-data-design">$14,232.70</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">242</div></td><td align="left"><div class="birt-data-design">Alpha Cognac</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10178</div></td><td align="left"><div class="birt-data-design">11/8/03</div></td><td align="right"><div class="birt-data-design">$33,818.34</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">242</div></td><td align="left"><div class="birt-data-design">Alpha Cognac</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10397</div></td><td align="left"><div class="birt-data-design">3/28/05</div></td><td align="right"><div class="birt-data-design">$12,432.32</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">250</div></td><td align="left"><div class="birt-data-design">Lyon Souveniers</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10134</div></td><td align="left"><div class="birt-data-design">7/1/03</div></td><td align="right"><div class="birt-data-design">$23,419.47</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">250</div></td><td align="left"><div class="birt-data-design">Lyon Souveniers</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10356</div></td><td align="left"><div class="birt-data-design">12/9/04</div></td><td align="right"><div class="birt-data-design">$26,311.63</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">250</div></td><td align="left"><div class="birt-data-design">Lyon Souveniers</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10395</div></td><td align="left"><div class="birt-data-design">3/17/05</div></td><td align="right"><div class="birt-data-design">$17,928.09</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">256</div></td><td align="left"><div class="birt-data-design">Auto Associés &amp; Cie.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10216</div></td><td align="left"><div class="birt-data-design">2/2/04</div></td><td align="right"><div class="birt-data-design">$5,759.42</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">256</div></td><td align="left"><div class="birt-data-design">Auto Associés &amp; Cie.</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10304</div></td><td align="left"><div class="birt-data-design">10/11/04</div></td><td align="right"><div class="birt-data-design">$53,116.99</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">350</div></td><td align="left"><div class="birt-data-design">Marseille Mini Autos</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10122</div></td><td align="left"><div class="birt-data-design">5/8/03</div></td><td align="right"><div class="birt-data-design">$50,824.66</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">350</div></td><td align="left"><div class="birt-data-design">Marseille Mini Autos</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10344</div></td><td align="left"><div class="birt-data-design">11/25/04</div></td><td align="right"><div class="birt-data-design">$18,888.31</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">350</div></td><td align="left"><div class="birt-data-design">Marseille Mini Autos</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10364</div></td><td align="left"><div class="birt-data-design">1/6/05</div></td><td align="right"><div class="birt-data-design">$1,834.56</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">353</div></td><td align="left"><div class="birt-data-design">Reims Collectables</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10121</div></td><td align="left"><div class="birt-data-design">5/7/03</div></td><td align="right"><div class="birt-data-design">$16,700.47</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">353</div></td><td align="left"><div class="birt-data-design">Reims Collectables</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10137</div></td><td align="left"><div class="birt-data-design">7/10/03</div></td><td align="right"><div class="birt-data-design">$13,920.26</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">353</div></td><td align="left"><div class="birt-data-design">Reims Collectables</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10343</div></td><td align="left"><div class="birt-data-design">11/24/04</div></td><td align="right"><div class="birt-data-design">$17,104.91</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">353</div></td><td align="left"><div class="birt-data-design">Reims Collectables</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10359</div></td><td align="left"><div class="birt-data-design">12/15/04</div></td><td align="right"><div class="birt-data-design">$32,600.61</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">353</div></td><td align="left"><div class="birt-data-design">Reims Collectables</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10398</div></td><td align="left"><div class="birt-data-design">3/30/05</div></td><td align="right"><div class="birt-data-design">$46,656.94</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">406</div></td><td align="left"><div class="birt-data-design">Auto Canal+ Petit</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10211</div></td><td align="left"><div class="birt-data-design">1/15/04</div></td><td align="right"><div class="birt-data-design">$49,165.16</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">406</div></td><td align="left"><div class="birt-data-design">Auto Canal+ Petit</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10252</div></td><td align="left"><div class="birt-data-design">5/26/04</div></td><td align="right"><div class="birt-data-design">$25,080.96</div></td></tr><tr valign="top"><td align="left"><div class="birt-data-design">406</div></td><td align="left"><div class="birt-data-design">Auto Canal+ Petit</div></td><td align="left"><div class="birt-data-design">France</div></td><td align="left"><div class="birt-data-design">10402</div></td><td align="left"><div class="birt-data-design">4/7/05</div></td><td align="right"><div class="birt-data-design">$12,190.85</div></td></tr><tr valign="top" type="wrtf" row-type="footer"><td align="left"></td><td align="left"></td><td align="left"></td><td align="left"></td><td align="left"></td><td align="left"></td></tr></tbody></table></td></tr><tr><td><div style=" overflow:hidden;" class="birt-label-design">Jan 24, 2013 11:43 AM</div></td></tr></tbody></table></div></div><div style="position: absolute; overflow: hidden; margin: 0px; padding: 0px; top: 0px; left: 0px; background-color: white; font-style: italic; width: 1902px; color: rgb(128, 128, 128); font-size: 14pt; font-family: sans-serif; height: 17pt;"><center>SingleUserTest License<br></center></div></div>
+</div>
+        
+</div>
+
+<div id="progress_animation_actuateViewerContainerjs3" class="progress_animation" style="position: absolute; z-index: 1000000; left: 960px; top: 463.5px; display: none;"><img src="http://127.0.0.1:55032/iportal/iportal/common/images/progress_animation.gif" valign="middle" aligh="center"></div></div></div>  
+                
+        </div>
+    
+
+<div id="progress_animation_null" class="progress_animation" style="position: absolute; z-index: 1000000; left: 960px; top: 463.5px; display: none;"><img src="http://127.0.0.1:55032/iportal/iportal/common/images/progress_animation.gif" valign="middle" aligh="center"></div><div id="progress_animation_null" class="progress_animation" style="position: absolute; z-index: 1000000; left: 960px; top: 463.5px; display: none;"><img src="http://127.0.0.1:55032/iportal/iportal/common/images/progress_animation.gif" valign="middle" aligh="center"></div><span id="actuate_viewer_resourcesContainer" style="display: inline;"><div>
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+<div style="height:100%;width:100%;display:inline" class="actuate_shared_resource" id="sharedresource">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="actuate_iv_ui_dialog_ivPromptDialog dialogContainerRoot actuate-hidden" id="actuate_iv_ui_dialog_ivPromptDialog">
+    
+    <span style="display: none; visibility: hidden;" id="actuate_iv_ui_dialog_ivPromptDialog_properties">
+        <span value="Prompt" name="title"></span>
+    </span>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="visibility:hidden;" id="actuate_iv_ui_dialog_ivPromptDialog_promptMessage">Session is about to timeout. Do you want to save your changes?</span>
+
+
+</div>
+
+    
+</div>
+<!-- End of iportal resources block -->
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+<div style="height:100%;width:100%;display:none" id="viewerresource">
+
+<!--  Copyright 1994-2005, Actuate Software Corp., All rights reserved.--> 
+
+
+
+
+
+
+
+
+
+<div class="contextMenu" id="actuate_iv_ui_app_contextmenu_ivContextMenu">
+
+    <!-- Main menu -->
+    <div style="display:none;position:absolute;z-index:310" root="true" id="contextMenuId_subMenu_Main_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div submenuid="contextMenu_subMenu_Header_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Header</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Group_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Group</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Column_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Column</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div class="ContextMenuHorizontalRule"></div>
+                    <div eventparam="10" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories10" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="9" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories9" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="8" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories8" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="7" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories7" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="6" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories6" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="5" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories5" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="4" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories4" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="3" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories3" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="2" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories2" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="1" eventname="DRILLUP_FROM_CATEGORIES" opt="DrillUpFromCategories" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill up from Categories</label>
+                    </div>
+                    <div eventparam="1" eventname="CHART_CATEGORIES" opt="DrillDownFromCategories" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_drill_down_from_Categories">
+                        <label class="ContextMenuLeafLabel">Drill into Categories</label>
+                    </div>
+
+                    <div class="ContextMenuHorizontalRule"></div>
+                        
+                    <div eventparam="10" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries10" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="9" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries9" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="8" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries8" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="7" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries7" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="6" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries6" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="5" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries5" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="4" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries4" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="3" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries3" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="2" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries2" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="1" eventname="DRILLUP_FROM_SERIES" opt="DrillUpFromSeries" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlay_drill_up_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill up from Series</label>
+                    </div>
+                    <div eventparam="1" eventname="CHART_SERIES" opt="DrillDownFromSeries" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_drill_down_from_Series">
+                        <label class="ContextMenuLeafLabel">Drill into Series</label>
+                    </div>
+                    
+                    <div class="ContextMenuHorizontalRule"></div>
+                        
+                    <div eventname="AGGREGATION" opt="Aggregation" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Aggregate">
+                        <label class="ContextMenuLeafLabel">Aggregation</label>
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Filter_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Filter</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>  
+
+                    <div class="ContextMenuHorizontalRule"></div>
+
+                    <div eventname="QUERYTYPE" opt="ChartSubType" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarchart">
+                        <label class="ContextMenuLeafLabel">Change Subtype</label>
+                    </div>  
+                    <div eventname="QUERYTYPE" opt="FlashGadgetType" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarchart">
+                        <label class="ContextMenuLeafLabel">Change Type</label>
+                    </div>  
+                    <div eventname="FLASHGADGET_FORMAT" opt="FlashGadgetFormat" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarchart">
+                        <label class="ContextMenuLeafLabel">Format Flash Gadget</label>
+                    </div>  
+                    <div eventname="CHART_FORMAT" opt="ChartProperty" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_chart_format">
+                        <label class="ContextMenuLeafLabel">Format Chart</label>
+                    </div>  
+                    
+                    <div eventname="QUERY_TEXT" opt="Text" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlayedit">
+                        <label class="ContextMenuLeafLabel">Change Text</label>
+                    </div>
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    <div eventname="SHOW_TOOLTIP" opt="ShowTooltip" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_show_tooltip">
+                        <label class="ContextMenuLeafLabel">Show Detail Tooltip</label>
+                    </div>
+                        
+                    <div class="ContextMenuHorizontalRule"></div>
+                    <div submenuid="contextMenu_subMenu_Grandtotal_Id" opt="GrandTotal" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Grand Totals</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="contextMenu_subMenu_Subtotal_Id" opt="SubTotal" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Subtotals</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                     
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    <div submenuid="contextMenu_subMenu_Sort_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Sort</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div submenuid="contextMenu_subMenu_Style_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Format</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div class="ContextMenuHorizontalRule"></div>
+                    <div eventname="DATA_ANALYZER" opt="DataAnalyzer" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_DataAnalyzer">
+                        <label class="ContextMenuLeafLabel">Analyze</label>
+                    </div>
+                    <div eventname="SWITCH_VIEW" opt="SwitchView" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Switch_view">
+                        <label class="ContextMenuLeafLabel">Switch View</label>
+                    </div>
+
+                    <div class="ContextMenuHorizontalRule"></div>
+
+                    <div eventname="QUERY_EXPORT" opt="ExportElementData" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_firstload actuateIV_Export">
+                        <label class="ContextMenuLeafLabel">Export Data</label>
+                    </div>
+                    <div eventname="EXPORTREPORT" opt="ExportElement" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_firstload actuateIV_ExportReport">
+                        <label class="ContextMenuLeafLabel">Export Content</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    
+    <!-- Style sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Style_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                    
+                    <div eventname="SHARE_STYLE" opt="ShareStyle" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Copy_style">
+                        <label class="ContextMenuLeafLabel">Copy Style</label>
+                    </div>
+                    
+                    <div eventname="CONDITIONALFORMATTING" opt="ConditionalFormat" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_conditional_format">
+                        <label class="ContextMenuLeafLabel">Conditional Formatting</label>
+                    </div>
+                    
+                    <div eventname="QUERY_FORMAT" opt="Format" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_data">
+                        <label class="ContextMenuLeafLabel">Format Data</label>
+                    </div>
+                        <div eventname="SHARE_FORMAT" opt="ShareFormat" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Copy_format">
+                        <label class="ContextMenuLeafLabel">Copy Format</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Grandtotal_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Grandtotal_label_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Label</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="contextMenu_subMenu_Grandtotal_data_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Data</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total Label sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_Id" id="contextMenu_subMenu_Grandtotal_label_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Grandtotal_label_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="???contextmenu.submenu.grandTotal.label.format.htmlId???" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Format</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+        <!-- Grand Total data sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_Id" id="contextMenu_subMenu_Grandtotal_data_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Grandtotal_data_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total Label alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_label_Id" id="contextMenu_subMenu_Grandtotal_label_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="GRANDTOTAL_LABEL_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="GRANDTOTAL_LABEL_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="GRANDTOTAL_LABEL_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Grand Total Label format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_label_Id" id="???contextmenu.submenu.grandTotal.label.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_GRANDTOTAL_LABEL_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Grand Total data alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_data_Id" id="contextMenu_subMenu_Grandtotal_data_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="GRANDTOTAL_DATA_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="GRANDTOTAL_DATA_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                    </div>
+                    
+                    <div eventname="GRANDTOTAL_DATA_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Grand Total data format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Grandtotal_data_Id" id="???contextmenu.submenu.grandTotal.data.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_GRANDTOTAL_DATA_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                        
+                    </div>                  
+                    
+                    <div eventname="QUERY_GRANDTOTAL_DATA_FORMAT" opt="Format" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_data">
+                        <label class="ContextMenuLeafLabel">Format Data</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+
+    <!-- Sub Total sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Subtotal_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Subtotal_label_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Label</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="contextMenu_subMenu_Subtotal_data_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Data</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- sub Total Label sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_Id" id="contextMenu_subMenu_Subtotal_label_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Subtotal_label_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    
+                    <div submenuid="???contextmenu.submenu.subTotal.label.format.htmlId???" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Format</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+        <!-- Sub Total data sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_Id" id="contextMenu_subMenu_Subtotal_data_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">                      
+                    <div submenuid="contextMenu_subMenu_Subtotal_data_align_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Sub Total Label alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_label_Id" id="contextMenu_subMenu_Subtotal_label_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="SUBTOTAL_LABEL_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_LABEL_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_LABEL_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Sub Total Label format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_label_Id" id="???contextmenu.submenu.subTotal.label.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_SUBTOTAL_LABEL_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Sub Total data alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_data_Id" id="contextMenu_subMenu_Subtotal_data_align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="SUBTOTAL_DATA_ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_DATA_ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="SUBTOTAL_DATA_ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+    <!-- Sub Total data format sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Subtotal_data_Id" id="???contextmenu.submenu.subTotal.data.format.htmlId???">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_SUBTOTAL_DATA_FONT" opt="ChangeFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                    
+                    <div eventname="QUERY_SUBTOTAL_DATA_FORMAT" opt="Format" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_data">
+                        <label class="ContextMenuLeafLabel">Format Data</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>                
+    </div>  
+    
+    <!-- Alignment sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Align_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="ALIGN_LEFT" opt="AlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="ALIGN_CENTER" opt="AlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="ALIGN_RIGHT" opt="AlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- LabelMenu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Header_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_TEXT" opt="HeaderText" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_overlayedit">
+                        <label class="ContextMenuLeafLabel">Change Text</label>
+                    </div>
+                    <div submenuid="contextMenu_subMenu_HeaderAlign_Id" class="ContextMenuItem">
+                        <label class="ContextMenuArrowLabel">Alignment</label>
+                        <input type="button" class="ContextMenuArrow actuateCSSSprite_selection actuateIV_arrow__r">
+                    </div>
+                    <div eventname="QUERY_HEADER_FONT" opt="ChangeHeaderFont" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Format_font">
+                        <label class="ContextMenuLeafLabel">Font</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+    
+    <!-- Label Alignment Menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenu_subMenu_Header_Id" id="contextMenu_subMenu_HeaderAlign_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="HEADER_ALIGN_LEFT" opt="HeaderAlignLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_left">
+                        <label class="ContextMenuLeafLabel">Left</label>
+                        
+                    </div>
+                    <div eventname="HEADER_ALIGN_CENTER" opt="HeaderAlignCenter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_center">
+                        <label class="ContextMenuLeafLabel">Center</label>
+                        
+                    </div>
+                    <div eventname="HEADER_ALIGN_RIGHT" opt="HeaderAlignRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Align_right">
+                        <label class="ContextMenuLeafLabel">Right</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>  
+
+
+    <!-- Filter sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Filter_Id">
+    
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="Filter" opt="Filter" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_toolbarfilter">
+                        <label class="ContextMenuLeafLabel">Filter</label>
+                        
+                    </div>
+
+                    <div eventname="TOPBOTTOMN" opt="TopBottomN" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_top_bottom_N">
+                        <label class="ContextMenuLeafLabel">Top/Bottom N</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+    
+    <!-- Group sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Group_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="QUERY_GROUP_DETAIL" opt="AddGroup" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Add_group">
+                        <label class="ContextMenuLeafLabel">Add Group</label>
+                        
+                    </div>
+                    <div eventname="DELETE_GROUP" opt="DeleteGroup" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Delete_group">
+                        <label class="ContextMenuLeafLabel">Delete Inner Group</label>
+                        
+                    </div>
+                    <div eventname="QUERY_PAGE_BREAK" opt="PageBreak" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Page_break">
+                        <label class="ContextMenuLeafLabel">Page Break</label>
+                        
+                    </div>
+                    <div eventname="HIDEDETAIL" opt="HideDetail" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_hide_detail">
+                        <label class="ContextMenuLeafLabel">Hide Detail</label>
+                        
+                    </div>
+                    <div eventname="SHOWDETAIL" opt="ShowDetail" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_show_detail">
+                        <label class="ContextMenuLeafLabel">Show Detail</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+    
+    <!-- Sort sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Sort_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="SORTASC" opt="SortAsc" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Sort_ascending">
+                        <label class="ContextMenuLeafLabel">Sort Ascending</label>
+                        
+                    </div>
+                    <div eventname="SORTDESC" opt="SortDsc" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Sort_descending">
+                        <label class="ContextMenuLeafLabel">Sort Descending</label>
+                        
+                    </div>
+                                        
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    <div eventname="SORTADVANCED" opt="AdvancedSort" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Advance_sort">
+                        <label class="ContextMenuLeafLabel">Advanced Sort</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+    
+    <!-- Column sub menu -->
+    <div style="display:none;position:absolute;z-index:310" parentid="contextMenuId_subMenu_Main_Id" id="contextMenu_subMenu_Column_Id">
+        <table class="ContextMenuDiv">
+            <tbody><tr>
+                <td nowrap="" class="ContextMenuCell">
+                    <div eventname="HIDE_COLUMN" opt="HideColumn" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Hide_column">
+                        <label class="ContextMenuLeafLabel">Hide Column</label>
+                        
+                    </div>
+                    <div eventname="QUERY_HIDDEN_COLUMN" opt="ShowColumns" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Show_all_columns">
+                        <label class="ContextMenuLeafLabel">Show Column</label>
+                        
+                    </div>
+                    <div eventname="DELETE_COLUMN" opt="DeleteColumn" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Delete">
+                        <label class="ContextMenuLeafLabel">Delete Column</label>
+                        
+                    </div>
+                    <div eventname="CALCULATION" opt="Calculation" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Calculation">
+                        <label class="ContextMenuLeafLabel">New Computed Column</label>
+                        
+                    </div>
+                    <div eventname="EDIT_CALCULATION" opt="EditCalculation" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_EditCalculation">
+                        <label class="ContextMenuLeafLabel">Edit Computed Column</label>
+                        
+                    </div>
+                    
+                    
+                    <div class="ContextMenuHorizontalRule"></div>
+                    
+                    
+                    <div eventname="MOVE_TO_LEFT" opt="MoveToLeft" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Move_to_left">
+                        <label class="ContextMenuLeafLabel">Move To Left</label>
+                        
+                    </div>
+                    <div eventname="MOVE_TO_RIGHT" opt="MoveToRight" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Move_to_right">
+                        <label class="ContextMenuLeafLabel">Move To Right</label>
+                        
+                    </div>
+                    <div eventname="QUERY_MANAGETABLECOLUMN" opt="ReorderColumns" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Reorder_columns">
+                        <label class="ContextMenuLeafLabel">Reorder Columns</label>
+                        
+                    </div>
+                    
+                    
+                    <div class="ContextMenuHorizontalRule"></div>                       
+                    
+                    
+                    <div eventname="REPEAT_VALUE" opt="SuppressDuplicateValues" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_repeat">
+                        <label class="ContextMenuLeafLabel">Repeat Values</label>
+                        
+                    </div>
+                    <div eventname="NO_REPEAT_VALUE" opt="NotSuppressDuplicateValues" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_do_not_repeat">
+                        <label class="ContextMenuLeafLabel">Do Not Repeat Values</label>
+                        
+                    </div>
+                    <div eventname="QUERY_GROUP" opt="MoveToGroup" class="ContextMenuItem">
+                        <input type="button" class="ContextMenuItemIcon actuateCSSSprite_selection actuateIV_Move_column">
+                        <label class="ContextMenuLeafLabel">Move to Group Header</label>
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+        <div configenabled="YES" opt="Toolbar" class="navbar" id="NavigationBar">
+            <table cellspacing="0" cellpadding="0" class="navbar_layout">
+                <tbody><tr nowrap="">
+                    <td width="16px">
+                    
+                    </td><td width="25px">  
+                        <input type="button" configenabled="YES" opt="MainMenu" title="Click to view Main Menu " class="navbar_start_img actuateCSSSprite_firstload actuateIV_start" name="ToolbarBtn">
+                    </td>
+                    
+                    <td width="11px">
+                    </td><td width="2px">
+                        <input type="button" tabindex="-1" class="navbar_seperator_img actuateCSSSprite_firstload actuateIV_divider" name="parameterimg">
+                    </td>
+                    <td width="11px">
+
+                    </td><td width="211px">
+                        <div configenabled="YES" id="actuate_iv_ui_app_ivNavigationBar_pagenavigation">
+                            <table cellspacing="0" cellpadding="0" class="navbar_layout">
+                                <tbody><tr>
+                                    <td width="40px" nowrap="" height="27px">
+                                        <span class="navbar_input_goto" value="
+                                                0
+                                        " id="actuate_iv_ui_app_ivNavigationBar_gotoPage"></span><span style="padding-left: 2px">/</span>
+                                    </td>
+                                    <td nowrap="">
+                                        <div id="actuate_iv_ui_app_ivNavigationBar_totalPage"></div>
+                                    </td>
+                                                                        
+                                    <td width="11px">
+                                    </td><td width="2px">
+                                        <input type="button" tabindex="-1" class="navbar_seperator_img actuateCSSSprite_firstload actuateIV_divider" name="parameterimg">
+                                    </td>
+                                    <td width="11px">
+                                    </td><td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_first_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_first" class="navbar_img actuateCSSSprite_firstload actuateIV_first" title="First Page" name="First">
+                                    </td>
+                                    <td width="8px" height="27px" align="center">&nbsp;&nbsp;</td>
+                                    <td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_prev_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_prev" class="navbar_img actuateCSSSprite_firstload actuateIV_prev" title="Previous Page" name="Previous">
+                                    </td>
+                                    <td width="24px" height="27px" align="center">&nbsp;&nbsp;</td>
+                                    <td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_next_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_next" class="navbar_img actuateCSSSprite_firstload actuateIV_next" title="Next Page" name="Next">
+                                    </td>
+                                    <td width="8px" height="27px" align="center">&nbsp;&nbsp;</td>
+                                    <td height="27px" align="center">
+                                        <input type="button" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_last_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_last" class="navbar_img actuateCSSSprite_firstload actuateIV_last" title="Last Page" name="Last">
+                                    </td>                   
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </td>
+        
+                    <td width="11px">
+                    </td><td width="2px">
+                        <input type="button" tabindex="-1" class="navbar_seperator_img actuateCSSSprite_firstload actuateIV_divider" name="parameterimg">
+                    </td>
+                    <td width="10px">
+                    </td><td width="15px" height="27px" class="navbar_cell_right">
+                        <input type="button" title="Undo" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_undo_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_undo" class="navbar_img actuateCSSSprite_firstload actuateIV_undo" name="undoimg">
+                    </td>
+                    <td width="12px" height="27px" align="center"></td>
+                    <td width="15px" height="27px" class="navbar_cell_right">                                                                   
+                        <input type="button" title="Redo" enabled_off="navbar_img actuateCSSSprite_firstload actuateIV_redo_disabled" enabled_on="navbar_img actuateCSSSprite_firstload actuateIV_redo" class="navbar_img actuateCSSSprite_firstload actuateIV_redo" name="redoimg">
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody></table>
+        </div>
+        
+
+
+
+                 
+
+
+
+
+
+
+
+
+<div class="toolbar_outermostDiv" style="display:none;">
+    <div class="toolbar_menuDiv">
+        
+                <div configenabled="YES" opt="EditReport" class="toolbar_buttonStyle" name="ENABLE_IV">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer">     
+                    &nbsp;Enable Interactivity
+                </div>
+                <div configenabled="YES" opt="EditReport" class="toolbar_buttonStyle" name="DISABLE_IV">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Interactive_viewer_disabled">    
+                       &nbsp;Disable Interactivity
+                </div>
+                <div class="toolbar_buttonStyle" name="LAUNCH_VIEWER">
+                    &nbsp;&nbsp;
+                    <input type="button" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Launch_viewer">    
+                       &nbsp;Launch Viewer
+                </div>
+                <hr width="140px">
+                <div configenabled="NO" opt="SaveDesign" class="toolbar_buttonStyle" name="QUERY_SAVE_FILE">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDesign_disable" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDesign" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDesign">     
+                        &nbsp;Save Design
+                </div>
+                <div configenabled="NO" opt="SaveDocument" class="toolbar_buttonStyle" name="QUERY_SAVE_DOCUMENT">
+                    &nbsp;&nbsp;
+                    <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDocument_disable" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDocument" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_saveDocument">    
+                        &nbsp;Save Document
+                </div>
+            
+        <div configenabled="YES" opt="Print" class="toolbar_buttonStyle" name="PRINT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Print_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Print" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Print">    
+                   &nbsp;Print
+        </div>
+        <div configenabled="YES" opt="ExportReport" class="toolbar_buttonStyle" name="DOCUMENT_EXPORTREPORT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_ExportReport_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_ExportReport" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_ExportReport">   
+                   &nbsp;Export Content
+        </div>
+        <div configenabled="YES" opt="ExportData" class="toolbar_buttonStyle" name="QUERY_DOCUMENT_EXPORT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Export_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Export" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Export">     
+                   &nbsp;Export Data
+        </div>
+        <hr width="140px">
+        <div class="toolbar_buttonStyle" name="FIRST">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_first_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_first" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_first">    
+                   &nbsp;First Page
+        </div>
+        <div class="toolbar_buttonStyle" name="PREVIOUS">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_prev_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_prev" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_prev">   
+                   &nbsp;Previous Page
+        </div>
+        <div class="toolbar_buttonStyle" name="NEXT">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_next_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_next" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_next">   
+                   &nbsp;Next Page
+        </div>
+        <div class="toolbar_buttonStyle" name="LAST">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_last_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_last" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_last">   
+                   &nbsp;Last Page
+        </div>
+        <div configenabled="YES" opt="Parameter" class="toolbar_buttonStyle" name="QUERY_PARAMETER">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Parameter_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Parameter" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Parameter">    
+                   &nbsp;Parameters
+        </div>
+        
+        <div configenabled="YES" opt="Toc" class="toolbar_buttonStyle" name="TOC">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Toc_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Toc" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Toc">     
+                   &nbsp;TOC
+        </div>
+        
+            <div configenabled="YES" opt="HideShowItems" class="toolbar_buttonStyle" name="HIDESHOW_ITEM">
+                &nbsp;&nbsp;
+                <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Hide_show_item_disabled" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Hide_show_item" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Hide_show_item">     
+                       &nbsp;Hide/Show Item
+            </div>
+            
+        <hr width="140px">
+        
+        <div configenabled="YES" opt="ShowMargin" class="toolbar_buttonStyle" name="SHOW_MARGIN">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Show_margin" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Show_margin" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Show_margin">   
+                   &nbsp;<label>Show Margin</label>
+        </div>
+        <hr width="140px">  
+            
+        <div configenabled="YES" opt="LinkToThisPage" class="toolbar_buttonStyle" name="LINKTOTHISPAGE">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Link_to_pg" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Link_to_pg" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_Link_to_pg">      
+                   &nbsp;Link to this page
+        </div>
+        <div configenabled="YES" opt="ToolbarHelp" class="toolbar_buttonStyle" name="HELP">
+            &nbsp;&nbsp;
+            <input type="button" enabled_off="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_toolbarHelp" enabled_on="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_toolbarHelp" class="toolbar_imageUrl actuateCSSSprite_firstload actuateIV_toolbarHelp">   
+                   &nbsp;Help
+        </div>
+    </div>
+</div>
+
+        
+
+
+
+
+
+
+ 
+
+<div class="content">
+
+
+
+
+
+
+
+
+
+ 
+
+
+<div ivhighlight="true" ivhoverhighlight="false" mousescrolling="" paninout="" scrollcontrol="" scrollpanel="" class="contentPanel">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="mapControl" id="MapControl">
+            <div style="top:0px;left:25px;position:absolute;" height="9px" width="9pz">
+                <input type="button" title="Up" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_up" name="mapupimg">
+            </div>
+            <div style="top:0px;left:54px;position:absolute;" height="6px" width="6px">
+                <input type="button" title="Top" style="display:none;" class="mapcontrol_corner actuateCSSSprite_firstload actuateIV_top" name="maptopimg">
+            </div>
+            <div style="top:25px;left:0px;position:absolute;" height="9px" width="9px">
+                <input type="button" title="Left" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_left" name="mapleftimg">
+            </div>
+            <div style="top:22px;left:22px;position:absolute;" height="16px" width="16px">
+                <input type="button" title="Return" class="mapcontrol_center actuateCSSSprite_firstload actuateIV_home" name="mapbackimg">
+            </div>
+            <div style="top:25px;left:51px;position:absolute;" height="9px" width="9px">
+                <input type="button" title="Right" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_right" name="maprightimg">
+            </div>
+            <div style="top:51px;left:25px;position:absolute;" height="9px" width="9px">
+                <input type="button" title="Down" class="mapcontrol_arrow actuateCSSSprite_firstload actuateIV_down" name="mapdownimg">
+            </div>
+            <div style="top:54px;left:54px;position:absolute;" height="6px" width="6px">
+                <input type="button" title="Bottom" class="mapcontrol_corner actuateCSSSprite_firstload actuateIV_bottom" name="mapbottomimg">
+            </div>
+        </div>
+    <div class="floatPanel"></div>
+</div>
+        
+</div>
+
+</div>  </div></span><div class="actuate-widget-tip" id="actu-widget-1012" style="position: absolute; z-index: 11000; visibility: hidden; display: none;"><div class="actuate-widget-tip-tl"><div class="actuate-widget-tip-tr"><div class="actuate-widget-tip-tc"></div></div></div><div class="actuate-widget-tip-bwrap" id="actuate-gen9"><div class="actuate-widget-tip-ml"><div class="actuate-widget-tip-mr"><div class="actuate-widget-tip-mc"><div class="actuate-widget-tip-body" id="actuate-gen10" style="height: auto;"></div></div></div></div><div class="actuate-widget-tip-bl actuate-widget-panel-nofooter"><div class="actuate-widget-tip-br"><div class="actuate-widget-tip-bc"></div></div></div></div><div class="actuate-widget-tip-anchor actuate-widget-tip-anchor-top" id="actuate-gen12"></div></div><div style="position: absolute; top: 0px; left: 0px; z-index: 200; background-color: rgb(0, 68, 255); opacity: 0; display: none;"></div><div style="position: absolute; top: 0px; left: 0px; z-index: 1000; background-color: rgb(255, 255, 255); opacity: 0; cursor: default; width: 1920px; height: 927px; display: none;"></div><div style="height: 1in; left: -100%; padding: 0px; position: absolute; top: -100%; width: 1in;"></div><div style="height: 1in; left: -100%; padding: 0px; position: absolute; top: -100%; width: 1in;"></div><div style="height: 1in; left: -100%; padding: 0px; position: absolute; top: -100%; width: 1in;"></div><div style="height: 1in; left: -100%; padding: 0px; position: absolute; top: -100%; width: 1in;"></div><div style="height: 1in; left: -100%; padding: 0px; position: absolute; top: -100%; width: 1in;"></div><div style="height: 1in; left: -100%; padding: 0px; position: absolute; top: -100%; width: 1in;"></div></body></html>

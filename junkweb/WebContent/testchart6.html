@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.highcharts.com/3.0.7/highcharts.js"></script>
+<script src="http://code.highcharts.com/3.0.7/highcharts-more.js"></script>
+<script src="js/chartmanager.js"></script>
+
+
+<script type="text/javascript">
+var data = {
+        "chart" : {
+            "zoomType" : "x",
+            "defaultSeriesType" : "scatter",
+            "resetZoomButton" : {
+                "relativeTo" : "chart",
+                "position" : {
+                    "x" : -10,
+                    "y" : -50,
+                    "verticalAlign" : "bottom"
+                }
+            },
+            "renderTo" : {}
+        },
+        "plotOptions" : {
+            "area" : {
+                "borderWidth" : 0
+            },
+            "areaspline" : {
+                "borderWidth" : 0
+            },
+            "line" : {
+                "borderWidth" : 0
+            },
+            "pie" : {
+                "borderWidth" : 0
+            },
+            "series" : {
+                "borderWidth" : 0
+            },
+            "spline" : {
+                "marker" : {
+                    "symbol" : "circle",
+                    "enabled" : true,
+                    "radius" : 4
+                },
+                "lineWidth" : 1,
+                "borderWidth" : 1
+            },
+            "column" : {
+                "borderWidth" : 0
+            },
+            "bar" : {
+                "borderWidth" : 0
+            }
+        },
+        "series" : [
+                {
+                    "data" : [
+                            {
+                                "x" : 1342065600000,
+                                "y" : 1,
+                                "name" : "Problem:null\n <br/>Product:Variable Annuity\n <br/>Source:null\n <br/>Complaint Date:07/12/2012\n <br/>Status:Denied"
+                            },
+                            {
+                                "x" : 1342152000000,
+                                "y" : 1,
+                                "name" : "Problem:null\n <br/>Product:Variable Annuity\n <br/>Source:null\n <br/>Complaint Date:07/13/2012\n <br/>Status:Denied"
+                            },
+                            {
+                                "x" : 1358398800000,
+                                "y" : 1,
+                                "name" : "Problem:null\n <br/>Product:No Product\n <br/>Source:null\n <br/>Complaint Date:01/17/2013\n <br/>Status:Denied"
+                            },
+                            {
+                                "x" : 1358398800000,
+                                "y" : 1,
+                                "name" : "Problem:null\n <br/>Product:No Product\n <br/>Source:null\n <br/>Complaint Date:01/17/2013\n <br/>Status:Denied"
+                            },
+                            {
+                                "x" : 1377057600000,
+                                "y" : 1,
+                                "name" : "Problem:null\n <br/>Product:Other\n <br/>Source:null\n <br/>Complaint Date:08/21/2013\n <br/>Status:null"
+                            },
+                            {
+                                "x" : 1377057600000,
+                                "y" : 1,
+                                "name" : "Problem:null\n <br/>Product:Other\n <br/>Source:null\n <br/>Complaint Date:08/21/2013\n <br/>Status:null"
+                            } ],
+                    "name" : "Concerns",
+                    "type" : "scatter",
+                    "color" : {
+                        "linearGradient" : {
+                            "x1" : 0,
+                            "y1" : 0,
+                            "x2" : 0,
+                            "y2" : 1
+                        },
+                        "stops" : [ [ 0, "#67c2ef" ], [ 1, "#1997d4" ] ]
+                    },
+                    "marker" : {
+                        "symbol" : "circle"
+                    }
+                },
+                {
+                    "data" : [
+                            {
+                                "x" : 1336449600000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:02/27/2012",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1344571200000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:07/13/2012",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1349236800000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:07/12/2012",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1365652800000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1366603200000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1366948800000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1369368000000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1369713600000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:01/17/2013",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1369886400000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:01/17/2013",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1373256000000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1376625600000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1378353600000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:08/21/2013",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1379044800000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Customer Complaint\n <br/>Received Date:08/21/2013",
+                                "radius" : 5
+                            },
+                            {
+                                "x" : 1389848400000,
+                                "y" : 2,
+                                "name" : "Disclosure Type:Judgement\n <br/>Received Date:06/01/2012",
+                                "radius" : 5
+                            } ],
+                    "name" : "Disclosures",
+                    "type" : "scatter",
+                    "color" : {
+                        "linearGradient" : {
+                            "x1" : 0,
+                            "y1" : 0,
+                            "x2" : 0,
+                            "y2" : 1
+                        },
+                        "stops" : [ [ 0, "#c1d39a" ], [ 1, "#50632a" ] ]
+                    },
+                    "marker" : {
+                        "symbol" : "circle"
+                    }
+                }, {
+                    "data" : [ {
+                        "x" : 1399067840996,
+                        "y" : 2.99,
+                        "name" : "",
+                        "radius" : 1
+                    } ],
+                    "name" : "Audits",
+                    "type" : "scatter",
+                    "color" : {
+                        "linearGradient" : {
+                            "x1" : 0,
+                            "y1" : 0,
+                            "x2" : 0,
+                            "y2" : 1
+                        },
+                        "stops" : [ [ 0, "#8d73a6" ], [ 1, "#402f51" ] ]
+                    },
+                    "marker" : {
+                        "symbol" : "circle"
+                    }
+                }, {
+                    "name" : "OBA",
+                    "type" : "scatter",
+                    "color" : {
+                        "linearGradient" : {
+                            "x1" : 0,
+                            "y1" : 0,
+                            "x2" : 0,
+                            "y2" : 1
+                        },
+                        "stops" : [ [ 0, "#d8d8d8" ], [ 1, "#808080" ] ]
+                    },
+                    "marker" : {
+                        "symbol" : "circle"
+                    }
+                }, {
+                    "data" : [ {
+                        "x" : 1396638757591,
+                        "y" : 5,
+                        "color" : "Red"
+                    }, {
+                        "x" : 1396931216666,
+                        "y" : 5,
+                        "color" : "Red"
+                    }, {
+                        "x" : 1399067840996,
+                        "y" : 4.99,
+                        "name" : "",
+                        "radius" : 1
+                    } ],
+                    "name" : "Alerts",
+                    "type" : "scatter",
+                    "color" : {
+                        "linearGradient" : {
+                            "x1" : 0,
+                            "y1" : 0,
+                            "x2" : 0,
+                            "y2" : 1
+                        },
+                        "stops" : [ [ 0, "#a2a2a2" ], [ 1, "#525252" ] ]
+                    },
+                    "marker" : {
+                        "symbol" : "circle"
+                    }
+                } ],
+        "xAxis" : {
+            "maxZoom" : 864000000,
+            "type" : "datetime",
+            "maxPadding" : 0,
+            "minPadding" : 0,
+            "endOnTick" : false,
+            "labels" : {
+                "rotation" : -45
+            }
+        },
+        "tooltip" : {},
+        "yAxis" : {
+            "min" : 0,
+            "gridLineWidth" : 0,
+            "labels" : {
+                "enabled" : false
+            },
+            "plotLines" : [ {
+                "color" : "#67c2ef",
+                "width" : 2,
+                "value" : 1
+            }, {
+                "color" : "#c1d39a",
+                "width" : 2,
+                "value" : 2
+            }, {
+                "color" : "#8d73a6",
+                "width" : 2,
+                "value" : 3
+            }, {
+                "color" : "#d8d8d8",
+                "width" : 2,
+                "value" : 4
+            }, {
+                "color" : "#a2a2a2",
+                "width" : 2,
+                "value" : 5
+            } ]
+        }
+    };
+
+$(document).ready(function() {
+    new ChartManager("#chartDiv0", data)
+//jQuery('#chartDiv0').highcharts(data);
+//jQuery('#chartDiv1').highcharts(data[1]);
+//jQuery('#chartDiv2').highcharts(data[2]);
+//jQuery('#chartDiv3').highcharts(data[3]);
+});
+</script>
+</head>
+<body>
+	<style>
+</style>
+	<div class="portlet-content">
+		<div class="portlet-body">
+			<div id="chartDiv0"></div>
+		</div>
+	</div>
+</body>
+</html>

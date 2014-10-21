@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Header>
+        <ConnectionHandle>3zj/eo12+XJPWxyNIiUHJARCqt0Bq59EynmqSNxbQPiYSGSlDHdgpjsfWZilbgPhNC1J/NQ+R7RHQL2WN8pc4PmNPzL5Af+ssIlCa5DHoO0KxxD4Ikk4YIVZ1J4UbpDNEd2NR/qIN+FODO3HffBJnqgj2JEGv4N3SwjxBo3PqAzmv+G6ruEiqGiULqroZd4HW3o6O3dFukfEm54J2mduW54hVENr8EKiwQRmfV9aAKxaXbVCptOq5qOD7pIko37ctX8xVwPOB0E=</ConnectionHandle>
+        <RequestId>11</RequestId>
+    </soapenv:Header>
+    <soapenv:Body>
+        <GetDashboardUpdatedObjects
+            xmlns="http://schemas.actuate.com/actuate11">
+            <Object>
+                <Name>/home/83_1030679/reged-default.dashboard</Name>
+            </Object>
+            <DashboardContext>
+                <WebAppPath>null</WebAppPath>
+                <AppBaseUrl>http://drutherford2.reged.com:8080/iportal/</AppBaseUrl>
+                <iPortalID>LUUIQFUWOJQKISLEIVWTPVWTXMLXUCHJBATUVEANAAECJLOMPPDLAPRJELFDNGZ</iPortalID>
+                <HttpSessionId>DF4C0E4371ECC5DAA4B2005D78391234</HttpSessionId>
+                <DashboardSessionID>1376511040917_DF4C0E4371ECC5DAA4B2005D78391234</DashboardSessionID>
+                <IVSessionID>1376511046452_DF4C0E4371ECC5DAA4B2005D78391234</IVSessionID>
+            </DashboardContext>
+            <Operation>
+                <Operator>SaveElement</Operator>
+                <Target>
+                    <Id>Engine</Id>
+                    <Type>Engine</Type>
+                </Target>
+                <Data>
+                    <ParameterValues>
+                        <ParameterValue>
+                            <Name>ArrayOfGadgetId</Name>
+                            <Value>[26]</Value>
+                        </ParameterValue>
+                        <ParameterValue>
+                            <Name>isShared</Name>
+                            <Value>false</Value>
+                        </ParameterValue>
+                        <ParameterValue>
+                            <Name>Path</Name>
+                            <Value>/Dashboard/Contents/Report -
+                                customerConcerns3.gadget</Value>
+                        </ParameterValue>
+                        <ParameterValue>
+                            <Name>Description</Name>
+                            <Value />
+                        </ParameterValue>
+                        <ParameterValue>
+                            <Name>ReplaceExisting</Name>
+                            <Value>true</Value>
+                        </ParameterValue>
+                    </ParameterValues>
+                    <ParameterDefinitions>
+                        <ParameterDefinition>
+                            <Name>UserName</Name>
+                            <DisplayName>Dashboard Test (234470)</DisplayName>
+                            <DefaultValue>VR</DefaultValue>
+                        </ParameterDefinition>
+                    </ParameterDefinitions>
+                </Data>
+            </Operation>
+        </GetDashboardUpdatedObjects>
+    </soapenv:Body>
+</soapenv:Envelope>

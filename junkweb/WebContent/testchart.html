@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+
+
+<script>
+var data = [{"chart":{"marginRight":0,"marginBottom":0,"defaultSeriesType":"line","marginLeft":0,"marginTop":0},"credits":{"enabled":false},"legend":{"enabled":false},"plotOptions":{"area":{"borderWidth":0},"areaspline":{"borderWidth":0},"line":{"borderWidth":0},"pie":{"borderWidth":0},"series":{"states":{"hover":{"lineWidth":1}},"marker":{"enabled":false,"radius":4,"states":{"select":{"lineWidth":0},"hover":{"radius":4,"enabled":false}}},"shadow":false,"lineWidth":2,"borderWidth":0},"spline":{"borderWidth":0},"column":{"borderWidth":0},"bar":{"borderWidth":0}},"series":[{"data":[{"x":1.393970484499E12,"y":13.0},{"x":1.393970688027E12,"y":13.0},{"x":1.393970688027E12,"y":18.0},{"x":1.393970838323E12,"y":18.0},{"x":1.393970838323E12,"y":16.0},{"x":1.393970985545E12,"y":16.0},{"x":1.393970985545E12,"y":9.0},{"x":1.395440919045E12,"y":9.0}],"type":"line"}],"title":{"text":""},"tooltip":{"enabled":false},"xAxis":{/*"max":19.0,*/"labels":{"enabled":false},"maxPadding":0,"minPadding":0,"endOnTick":false},"yAxis":{"labels":{"enabled":false},"maxPadding":0,"minPadding":0,"endOnTick":false}},
+            {"chart":{"marginRight":0,"marginBottom":0,"defaultSeriesType":"line","marginLeft":0,"marginTop":0},"credits":{"enabled":false},"legend":{"enabled":false},"plotOptions":{"area":{"borderWidth":0},"areaspline":{"borderWidth":0},"line":{"borderWidth":0},"pie":{"borderWidth":0},"series":{"states":{"hover":{"lineWidth":1}},"marker":{"enabled":false,"radius":4,"states":{"select":{"lineWidth":0},"hover":{"radius":4,"enabled":false}}},"shadow":false,"lineWidth":2,"borderWidth":0},"spline":{"borderWidth":0},"column":{"borderWidth":0},"bar":{"borderWidth":0}},"series":[{"data":[{"x":1.395178514234E12,"y":59.0}],"type":"line"}],"title":{"text":""},"tooltip":{"enabled":false}},
+            {"chart":{"marginRight":0,"marginBottom":0,"defaultSeriesType":"line","marginLeft":0,"marginTop":0},"credits":{"enabled":false},"legend":{"enabled":false},"plotOptions":{"area":{"borderWidth":0},"areaspline":{"borderWidth":0},"line":{"borderWidth":0},"pie":{"borderWidth":0},"series":{"states":{"hover":{"lineWidth":1}},"marker":{"enabled":false,"radius":4,"states":{"select":{"lineWidth":0},"hover":{"radius":4,"enabled":false}}},"shadow":false,"lineWidth":2,"borderWidth":0},"spline":{"borderWidth":0},"column":{"borderWidth":0},"bar":{"borderWidth":0}},"series":[{"data":[{"x":1.395344506224E12,"y":242699.26}],"type":"line"}],"title":{"text":""},"tooltip":{"enabled":false}},
+            {"chart":{"marginRight":0,"marginBottom":0,"defaultSeriesType":"line","marginLeft":0,"marginTop":0},"credits":{"enabled":false},"legend":{"enabled":false},"plotOptions":{"area":{"borderWidth":0},"areaspline":{"borderWidth":0},"line":{"borderWidth":0},"pie":{"borderWidth":0},"series":{"states":{"hover":{"lineWidth":1}},"marker":{"enabled":false,"radius":4,"states":{"select":{"lineWidth":0},"hover":{"radius":4,"enabled":false}}},"shadow":false,"lineWidth":2,"borderWidth":0},"spline":{"borderWidth":0},"column":{"borderWidth":0},"bar":{"borderWidth":0}},"series":[{"data":[{"x":1.395370613444E12,"y":216.0},{"x":1.395409075578E12,"y":216.0},{"x":1.395409075578E12,"y":80.0},{"x":1.395410097377E12,"y":80.0},{"x":1.395410097377E12,"y":214.0}],"type":"line"}],"title":{"text":""},"tooltip":{"enabled":false}}];
+
+$(document).ready(function() {
+jQuery('#chartDiv0').highcharts(data[0]);
+//jQuery('#chartDiv1').highcharts(data[1]);
+//jQuery('#chartDiv2').highcharts(data[2]);
+//jQuery('#chartDiv3').highcharts(data[3]);
+});
+</script>
+</head>
+<body>
+	<style>
+div[id^='chartDiv'] {
+	height: 100px;
+	width: 137px;
+}
+</style>
+    <div id="chartDiv0"></div>
+    <div id="chartDiv1"></div>
+    <div id="chartDiv2"></div>
+    <div id="chartDiv3"></div>
+</body>
+</html>

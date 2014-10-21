@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.highcharts.com/3.0.7/highcharts.js"></script>
+<script src="http://code.highcharts.com/3.0.7/highcharts-more.js"></script>
+
+
+<script type="text/javascript">
+var data = {
+        "chart" : {
+            //"zoomType" : "x",
+            "marginRight" : 10,
+            "width" : 600,
+            "height" : 170,
+            "defaultSeriesType" : "line",
+            "marginLeft" : 10,
+            "marginTop" : 10/*,
+            "resetZoomButton" : {
+                "relativeTo" : "chart",
+                "position" : {
+                    "x" : -10,
+                    "y" : -50,
+                    "verticalAlign" : "bottom"
+                }
+            }*/
+        },
+        "credits" : {
+            "enabled" : false
+        },
+        "plotOptions" : {
+            "area" : {
+                "borderWidth" : 0
+            },
+            "arealine" : {
+                "borderWidth" : 0
+            },
+            "line" : {
+                "borderWidth" : 0
+            },
+            "pie" : {
+                "borderWidth" : 0
+            },
+            "series" : {
+                "borderWidth" : 0,
+                "states" : {
+                    "hover" : {
+                        "enabled" : false,
+                        "lineWidth" : 0
+                    }
+                }
+                    
+            },
+            "column" : {
+                "borderWidth" : 0
+            },
+            "bar" : {
+                "borderWidth" : 0
+            }
+        },
+        "series" : [ {
+            "data" : [ {
+                "x" : 1.33538355667E12,
+                "y" : 0.98
+            }, {
+                "x" : 1.39845555667E12,
+                "y" : 0.99
+            } ],
+            "name" : "Concerns",
+            "type" : "line"
+        }, {
+            "data" : [ {
+                "x" : 1.33538355667E12,
+                "y" : 1.98
+            }, {
+                "x" : 1.39845555667E12,
+                "y" : 1.99
+            } ],
+            "name" : "Disclosures",
+            "type" : "line"
+        }, {
+            "data" : [ {
+                "x" : 1.33538355667E12,
+                "y" : 2.98
+            }, {
+                "x" : 1.39845555667E12,
+                "y" : 2.99
+            } ],
+            "name" : "Audits",
+            "type" : "line"
+        }, {
+            "data" : [ {
+                "x" : 1.33538355667E12,
+                "y" : 3.98
+            }, {
+                "x" : 1.39845555667E12,
+                "y" : 3.99
+            } ],
+            "name" : "OBA",
+            "type" : "line"
+        }, {
+            "data" : [ {
+                "x" : 1.33538355667E12,
+                "y" : 4.98
+            }, {
+                "x" : 1.39845555667E12,
+                "y" : 4.99
+            } ],
+            "name" : "Alerts",
+            "type" : "line"
+        } ],
+        "title" : {
+            "text" : ""
+        },
+        "subtitle" : {
+            "text" : ""
+        },
+        "xAxis" : {
+            //"maxZoom" : 864000000,
+            "type" : "datetime",
+            /*"dateTimeLabelFormats" : {
+                "minute" : "%e-%b-%Y",
+                "second" : "%e-%b-%Y",
+                "month" : "%b %Y",
+                "year" : "%b %Y",
+                "hour" : "%e-%b-%Y",
+                "day" : "%e-%b-%Y",
+                "week" : "%e-%b-%Y"
+            },*/
+            "maxPadding" : 0,
+            "minPadding" : 0,
+            "endOnTick" : false
+        },
+        "yAxis" : {
+            "min" : 0.0,
+            "labels" : {
+                "enabled" : false
+            },
+            "title" : {
+                "text" : ""
+            },
+            "maxPadding" : 0,
+            "minPadding" : 0,
+            "endOnTick" : false
+        },
+        tooltip: {
+            formatter: function() {
+                return  '<b>' + this.series.name +'</b><br/>' +
+                    Highcharts.dateFormat('%e - %b - %Y',
+                                          new Date(this.x))
+                + ' date, ' + this.y + ' Kg.';
+            }
+        }
+    };
+
+$(document).ready(function() {
+jQuery('#chartDiv0').highcharts(data);
+//jQuery('#chartDiv1').highcharts(data[1]);
+//jQuery('#chartDiv2').highcharts(data[2]);
+//jQuery('#chartDiv3').highcharts(data[3]);
+});
+</script>
+</head>
+<body>
+	<style>
+</style>
+	<div class="portlet-content">
+		<div class="portlet-body">
+			<div id="chartDiv0"></div>
+		</div>
+	</div>
+</body>
+</html>
