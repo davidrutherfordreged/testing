@@ -3,6 +3,7 @@ import java.io.IOException;
 
 /**
  * dummy test class
+ * another comment line
  * @author david.rutherford
  * @version $Revision$
  */
