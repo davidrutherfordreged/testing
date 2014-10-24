@@ -1,7 +1,11 @@
 import java.io.File;
 import java.io.IOException;
 
-
+/**
+ * dummy test class
+ * @author david.rutherford
+ * @version $Revision$
+ */
 public class DirectoryCreationTest {
 
     /**
