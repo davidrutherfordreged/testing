@@ -1,5 +1,5 @@
 /**
- * 
+ * Header comment
  */
 
 import java.util.Enumeration;
